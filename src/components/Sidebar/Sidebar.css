@@ -1,0 +1,72 @@
+/* Sidebar.css */
+.sidebar {
+    background-color: rgb(185, 187, 193);
+    color: white;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    transition: width 0.3s; /* Add a transition for smooth width changes */
+  }
+  
+  /* Sidebar navigation links */
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar ul li:hover {
+    background: white;
+  }
+  
+  .sidebar ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .sidebar ul li a:hover {
+    color: rgb(77, 134, 195);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .sidebar {
+        
+      width: 100%; /* Sidebar takes full width on smaller screens */
+      height: auto; /* Allow the sidebar to expand based on content */
+      position: relative; /* Reset the fixed position */
+      padding: 10px; /* Reduce padding for smaller screens */
+      z-index: 1; /* Ensure it's above the content */
+    }
+  
+    .sidebar ul li {
+       
+      margin-bottom: 5px; /* Reduce margin for list items */
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-direction: row; /* Display navigation items horizontally */
+        flex-wrap: wrap; /* Allow items to wrap to the next row if necessary */
+        justify-content: space-evenly; /* Add space between items */
+      }
+  
+    /* Add additional styles for the top navigation bar appearance */
+    .top-navbar {
+        
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px 20px; /* Adjust padding as needed */
+      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2); /* Add a shadow for separation */
+    }
+  }
+  

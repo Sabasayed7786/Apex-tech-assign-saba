@@ -1,0 +1,111 @@
+
+
+
+/* AllScenario.css */
+
+/* Desktop View */
+.container {
+  background-color: black;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  margin: 0 auto;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 710px;
+}
+
+h2 {
+  color: #fff;
+  margin-left: 350px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  margin-left: 1070px;
+}
+
+.button-group button {
+  margin-left: 10px;
+  padding: 10px 15px;
+  background-color: #0056b3;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-group button:hover {
+  background-color: #00408a;
+}
+
+.scenario-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  color: #000;
+  margin-left: 350px;
+}
+
+.scenario-table th,
+.scenario-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+.scenario-table th {
+  background-color: rgb(56, 50, 50);
+  color: #fff;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  h2 {
+    margin-left: 0; /* Center-align the title */
+  }
+
+  .button-group {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    align-items: flex-start; /* Move buttons to the left */
+    margin-left: 0; /* Remove left margin */
+    margin-bottom: 10px; /* Add vertical spacing between buttons */
+  }
+
+  .button-group button {
+    margin-left: 0; /* Remove left margin for buttons */
+    margin-bottom: 10px; /* Add vertical spacing between buttons */
+  }
+
+  .scenario-table {
+    margin-left: 0; /* Remove left margin for the table */
+    margin-right: 0; /* Remove right margin for the table */
+    padding: 0; /* Remove horizontal padding for the table */
+  }
+}

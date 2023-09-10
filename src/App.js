@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React,{useState} from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Sidebar from "./components/Sidebar/Sidebar";
+import Home from "./components/Home/Home";
+import AddScenario from "./components/AddScenario/AddScenario";
+import AllScenario from "./components/AllScenario/AllScenario";
+import AddVehicle from "./components/AddVehicle/AddVehicle";
+import "./App.css"
 
 function App() {
+  const [scenarios, setScenarios] = useState([]);
+
+  
+  const addScenario = (newScenario) => {
+    setScenarios([...scenarios, newScenario]);
+  };
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div  >
+    <Router>
+      <div><Sidebar />
+        <Routes>
+          
+          <Route path="/" element={<Home/>} />
+          <Route path="/add-scenario" element={<AddScenario scenarios={scenarios} />} />
+          <Route path="/all-scenario" element={<AllScenario scenarios={scenarios} />} />
+          <Route path="/add-vehicle" element={<AddVehicle scenarios={scenarios}  />} />
+        </Routes>
+        </div>
+      </Router>
+      </div>
+      
   );
 }
 
 export default App;
+
